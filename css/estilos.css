@@ -1,0 +1,167 @@
+@font-face {
+  font-family: gameFont;
+  src: url("../fonts/ShareTechMono-Regular.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  transform: scale(0.98);
+}
+
+body {
+  /* Changed :) */
+  /* background-image: url('../image/background.jpg'); */
+  /* background-size: cover; */
+  background-color: #acacac;
+}
+
+.main-container {
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.main-titulo {
+  margin-top: -20px;
+  font-family: gameFont;
+  font-size: 3em;
+  color: #dcff0e;
+  width: 100%;
+}
+
+.panel-tablero {
+  width: 57vw;
+  border-radius: 28px;
+  background: linear-gradient(145deg, #acacac, #919191);
+  box-shadow: 13px 13px 24px #898989, -13px -13px 24px #b9b9b9;
+  display: flex;
+  flex-flow: row wrap;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+}
+
+.panel-score {
+  width: 25%;
+  height: 740px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+}
+
+.score:hover,
+.moves:hover,
+.time:hover {
+  width: 101%;
+  border-radius: 28px;
+  background: linear-gradient(145deg, #919191, #acacac);
+  box-shadow: 13px 13px 24px #898989, -13px -13px 24px #b9b9b9;
+}
+
+.score,
+.moves,
+.time {
+  text-align: center;
+  height: 23%;
+  width: 100%;
+  border-radius: 28px;
+  background: #a1a1a1;
+  box-shadow: 13px 13px 24px #898989, -13px -13px 24px #b9b9b9;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+}
+
+.buttons {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.data-titulo,
+.data-info {
+  font-family: gameFont;
+  color: #232323;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+}
+
+.titulo-over {
+  font-family: gameFont;
+  font-size: 3em;
+  text-align: center;
+  color: #dcff0e;
+}
+
+.btn-reinicio {
+  border-radius: 28px;
+  background: linear-gradient(145deg, #acacac, #919191);
+  box-shadow: 13px 13px 24px #898989, -13px -13px 24px #b9b9b9;
+  width: 14rem;
+  font-family: gameFont;
+  font-size: 1.2em;
+  color: #232323;
+  outline: none;
+  border: none;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+}
+
+.btn-reinicio:hover {
+  width: 101%;
+  color: #ffdd00;
+  cursor: pointer;
+  border-radius: 28px;
+  background: linear-gradient(145deg, #919191, #acacac);
+  box-shadow: 13px 13px 24px #898989, -13px -13px 24px #b9b9b9;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+  outline: none;
+}
+
+.btn-reinicio:active {
+  font-size: 1em;
+  border-radius: 28px;
+  background: #a1a1a1;
+  box-shadow: inset 13px 13px 24px #898989, inset -13px -13px 24px #b9b9b9;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+  outline: none;
+}
+
+.data-info {
+  font-size: 1.8em;
+}
+
+div[class^="col"] {
+  /* margin: 1%; */
+  /* height: 60vh; */
+  width: 8vw;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  align-items: center;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+}
+
+img[class^="element"] {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 13%;
+}
+
+.elemento {
+  width: 99.4px;
+  height: 96px;
+}
+
+/* NOT USED  */
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
